@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Focus visible styles for accessibility */
+@layer base {
+  *:focus-visible {
+    @apply outline-2 outline-primary-500 outline-offset-2;
+  }
+
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    @apply outline-2 outline-primary-500 outline-offset-2;
+  }
+}
+}
