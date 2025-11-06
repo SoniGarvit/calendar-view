@@ -31,18 +31,18 @@ const CATEGORIES = [
   "Other",
 ];
 
-type Category = (typeof CATEGORIES)[number];
+// type Category = (typeof CATEGORIES)[number];
 
-type FormState = {
-  title: string;
-  description: string;
-  startDate: string;
-  startTime: string;
-  endDate: string;
-  endTime: string;
-  color: string;
-  category: string;
-};
+// type FormState = {
+//   title: string;
+//   description: string;
+//   startDate: string;
+//   startTime: string;
+//   endDate: string;
+//   endTime: string;
+//   color: string;
+//   category: string;
+// };
 
 const pad = (n: number) => String(n).padStart(2, "0");
 const toDateInput = (d: Date) =>

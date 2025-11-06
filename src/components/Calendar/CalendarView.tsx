@@ -14,7 +14,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
   onEventAdd,
   onEventUpdate,
   onEventDelete,
-  initialView = "month",
   initialDate,
 }) => {
   const calendar = useCalendar(initialDate);
@@ -50,7 +49,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto w-full p-3 sm:p-4 md:p-8 min-h-[80vh] bg-neutral-50 rounded-xl shadow-lg">
-      {/* Calendar header */}
       <CalendarHeader
         currentDate={calendar.currentDate}
         view={calendar.view}
@@ -60,7 +58,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         onViewChange={calendar.setView}
       />
 
-      {/* Calendar grid (month/week views) */}
       <div className="w-full mt-2 sm:mt-4">
         {calendar.view === "month" ? (
           <MonthView
@@ -80,7 +77,6 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         )}
       </div>
 
-      {/* Event modal */}
       <EventModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

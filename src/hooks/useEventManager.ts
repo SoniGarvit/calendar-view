@@ -6,7 +6,7 @@ export const useEventManager = (initialEvents: CalendarEvent[] = []) => {
 
   const addEvent = useCallback(
     (event: CalendarEvent) => {
-      setEvents((prev) => ({ ...prev, event }));
+      setEvents((prev) => ([ ...prev, event ]));
     },
     []
   );

@@ -131,7 +131,7 @@ export const LargestDataset: Story = {
     docs: {
       description: {
         story:
-          "Calendar with 25+ events to test performance and overflow handling.",
+          "Calendar with 20+ events to test performance and overflow handling.",
       },
     },
   },
