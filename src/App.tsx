@@ -2,13 +2,19 @@ import { useState } from "react";
 import { CalendarView } from "./components/Calendar/CalendarView";
 import type { CalendarEvent } from "./types/calendar.types";
 
+const currentYear = new Date().getFullYear();
+const currentMonth = new Date().getMonth();
+const randomDateArr = Array.from({ length: 30 }, (_, i) => i + 1)
+  .sort(() => 0.5 - Math.random())
+  .slice(0, 5);
+
 const initialEvents = [
   {
     id: "evt-1",
     title: "Design Review",
     description: "Initial review of new UI.",
-    startDate: new Date(2025, 10, 2, 13, 30),
-    endDate: new Date(2025, 10, 2, 15, 0),
+    startDate: new Date(currentYear, currentMonth, randomDateArr[0], 13, 30),
+    endDate: new Date(currentYear, currentMonth, randomDateArr[0], 15, 0),
     color: "#10b981",
     category: "Review",
   },
@@ -16,9 +22,36 @@ const initialEvents = [
     id: "evt-2",
     title: "Team Sync",
     description: "",
-    startDate: new Date(2025, 10, 3, 10, 0),
-    endDate: new Date(2025, 10, 3, 11, 0),
+    startDate: new Date(currentYear, currentMonth, randomDateArr[1], 10, 0),
+    endDate: new Date(currentYear, currentMonth, randomDateArr[1], 11, 0),
     color: "#3b82f6",
+    category: "Meeting",
+  },
+  {
+    id: "evt-3",
+    title: "Project Kickoff",
+    description: "",
+    startDate: new Date(currentYear, currentMonth, randomDateArr[2], 12, 30),
+    endDate: new Date(currentYear, currentMonth, randomDateArr[2], 13, 0),
+    color: "#8b5cf6",
+    category: "Development",
+  },
+  {
+    id: "evt-4",
+    title: "Training Session",
+    description: "",
+    startDate: new Date(currentYear, currentMonth, randomDateArr[3], 16, 0),
+    endDate: new Date(currentYear, currentMonth, randomDateArr[3], 17, 0),
+    color: "#ec4899",
+    category: "Personal",
+  },
+  {
+    id: "evt-5",
+    title: "Client Presentation",
+    description: "",
+    startDate: new Date(currentYear, currentMonth, randomDateArr[4], 11, 0),
+    endDate: new Date(currentYear, currentMonth, randomDateArr[4], 12, 30),
+    color: "#f59e0b",
     category: "Meeting",
   },
 ];

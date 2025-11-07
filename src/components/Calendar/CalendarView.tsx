@@ -58,7 +58,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         onViewChange={calendar.setView}
       />
 
-      <div className="w-full mt-2 sm:mt-4">
+      <div className="w-full mt-2 align-middle sm:mt-4">
         {calendar.view === "month" ? (
           <MonthView
             currentDate={calendar.currentDate}

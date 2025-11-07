@@ -49,7 +49,7 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center animate-fade-in"
+      className="fixed   inset-0 z-50 flex items-center justify-center animate-fade-in"
       onClick={onClose}
       aria-hidden="true"
     >
@@ -61,7 +61,7 @@ export const Modal: React.FC<ModalProps> = ({
           aria-labelledby="modal-title"
           aria-describedby={description ? "modal description" : undefined}
           className={clsx(
-            "relative bg-white rounded-xl shadow-modal animate-slide-up max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto",
+            "relative   bg-white rounded-xl shadow-modal animate-slide-up max-w-lg w-full mx-4 max-h-[90vh] overflow-y-auto",
             className
           )}
           onClick={(e) => e.stopPropagation()}
